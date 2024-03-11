@@ -1,0 +1,178 @@
+@import "./variables.scss";
+@import "./equipo.scss";
+@import "./clientes.scss";
+@import "./contacto.scss";
+@import "./servicios.scss";
+@import "./reset.scss";
+
+@mixin flexbox($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin background ($repeat, $size) {
+    background-repeat: $repeat;
+    background-size: $size;
+}
+
+@mixin media-query-mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+header {
+    @include flexbox(center, center);
+    display: flex;
+    height: 85px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    font-family: Tahoma, sans-serif;
+    .ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+    }
+    .list-item a {
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 400;
+        color: white;
+        padding: 35px;
+    }
+}
+
+.list-item a:hover {
+    color: black;
+}
+
+#banner_small {
+    display: flex;
+    flex-direction: row;
+    background-image: url(../images/mkt2.jpg);
+    height: 100px;
+    @include background (no-repeat, cover);
+}
+
+#banner_medium {
+    display: flex;
+    flex-direction: row;
+    background-image: url(../images/mkt2.jpg);
+    height: 200px;
+    @include background (no-repeat, cover);
+}
+
+#hero {
+    width: 100%;
+    height: 50vh;
+    background-image: url('../images/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .h1-container {
+      padding: 50px;
+    }
+    .h1 {
+      font-size: 85px;
+      font-weight: 300;
+      color: $color-primario;
+      @include media-query-mobile() {
+        font-size: 30px;
+        padding: 35px;
+        }
+    }
+    .p-container {
+      padding: 35px;
+    .p {
+      color: $color-primario;
+      font-size: 20px;      
+      @include media-query-mobile() {
+        align-items: center;
+        padding: 0px;
+        font-size: 25px;
+        justify-content: center;
+            }   
+        }
+    }
+}
+
+.rrss {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+.sobre-nosotros {
+    @include flexbox(center, center);
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px;
+    gap: 20px;
+    padding: 100px;
+  
+    & h1 {
+      background-color: $color-terciario;
+      color: $color-secundario;
+      padding: 10px;
+    }
+  
+    & h2 {
+      font-size: medium;
+    }
+  }
+
+#agendar {
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 100px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    height: 500px;
+}
+
+@media (max-width: 480px) {
+    .sobre-nosotros {
+    flex-direction: column;
+    padding: 50px;
+    }
+}
+
+@media (min-width: 481px) {
+    .navbar-toggler {
+      display:block;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header {
+        display: block
+    }
+}
+
+@media (max-width: 480px) {
+    header ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    header .list-item {
+        color: white;
+        background-color: $color-secundario;
+        padding: 7px;
+    }
+}    
+
+@media (max-width: 480px) {
+    .conoce h1 {
+        font-size: medium;
+    }
+}

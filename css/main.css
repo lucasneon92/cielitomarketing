@@ -1,0 +1,393 @@
+.miembro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media (max-width: 480px) {
+  .miembro {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.miembro-texto {
+  width: 50%;
+  padding: 20px;
+  background-color: rgb(211, 211, 211);
+  color: black;
+  padding: 50PX;
+}
+@media (max-width: 480px) {
+  .miembro-texto {
+    width: 85%;
+    padding: 50px;
+  }
+}
+
+.miembro-imagen {
+  width: 20%;
+  height: 20%;
+}
+.miembro-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 480px) {
+  .miembro-imagen {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+  }
+}
+
+.miembro2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-image: url(../images/banner-miembros.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 480px) {
+  .miembro2 {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.cliente {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.cliente-texto {
+  width: 50%;
+  background-color: rgb(214, 214, 214);
+  color: rgb(0, 0, 0);
+  padding: 50PX;
+  align-items: center;
+}
+
+.cliente-imagen {
+  width: 50;
+  height: 50;
+  padding: 50px;
+}
+.cliente-imagen img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cliente-b {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 50px;
+  background-image: url(../images/banner-miembros.jpeg);
+  color: white;
+}
+
+.conoce {
+  background-color: grey;
+  color: white;
+  font-size: large;
+  text-align: center;
+  padding: 30px;
+}
+
+@media (max-width: 480px) {
+  .cliente {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .cliente-texto {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .cliente-b {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.contacto {
+  text-align: center;
+  padding: 50px;
+}
+
+.contacto-b {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+.horarios {
+  padding: 50px;
+}
+
+.redes {
+  padding: 50px;
+  text-align: center;
+}
+.redes .redes-sociales {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.redes .redes-sociales li {
+  margin: 0 10px;
+}
+.redes .redes-sociales li img {
+  width: 30px;
+  height: 30px;
+}
+
+.donde-estamos-a {
+  background-color: grey;
+  color: white;
+  font-size: large;
+  text-align: center;
+  padding: 30px;
+}
+
+.donde-estamos-b {
+  display: flex;
+  background-image: url(../images/mkt2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
+}
+
+@media (max-width: 480px) {
+  .contacto-b {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 33% 33% 33%;
+  background-color: #ffffff;
+  color: white;
+  padding: 50px;
+}
+@media (max-width: 480px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+}
+
+.box {
+  background-color: grey;
+  color: black;
+  border-radius: 1px;
+  padding: 30px;
+}
+.box h1 {
+  font-size: large;
+  padding: 20px;
+  background-color: rgb(36, 35, 35);
+  color: white;
+}
+.box h2 {
+  font-size: medium;
+  padding: 20px;
+}
+.box:hover {
+  border: 1px solid black;
+}
+.box.a {
+  grid-column: 1/3;
+  grid-row: 1;
+}
+.box.b {
+  grid-column: 3;
+  grid-row: 1/3;
+}
+.box.c {
+  grid-column: 1;
+  grid-row: 2;
+}
+.box.d {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 85px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: Tahoma, sans-serif;
+}
+header .ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+header .list-item a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  padding: 35px;
+}
+
+.list-item a:hover {
+  color: black;
+}
+
+#banner_small {
+  display: flex;
+  flex-direction: row;
+  background-image: url(../images/mkt2.jpg);
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#banner_medium {
+  display: flex;
+  flex-direction: row;
+  background-image: url(../images/mkt2.jpg);
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#hero {
+  width: 100%;
+  height: 50vh;
+  background-image: url("../images/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#hero .h1-container {
+  padding: 50px;
+}
+#hero .h1 {
+  font-size: 85px;
+  font-weight: 300;
+  color: white;
+}
+@media (max-width: 480px) {
+  #hero .h1 {
+    font-size: 30px;
+    padding: 35px;
+  }
+}
+#hero .p-container {
+  padding: 35px;
+}
+#hero .p-container .p {
+  color: white;
+  font-size: 20px;
+}
+@media (max-width: 480px) {
+  #hero .p-container .p {
+    align-items: center;
+    padding: 0px;
+    font-size: 25px;
+    justify-content: center;
+  }
+}
+
+.rrss {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+}
+
+.sobre-nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20px;
+  gap: 20px;
+  padding: 100px;
+}
+.sobre-nosotros h1 {
+  background-color: grey;
+  color: black;
+  padding: 10px;
+}
+.sobre-nosotros h2 {
+  font-size: medium;
+}
+
+#agendar {
+  text-align: center;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 100px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  height: 500px;
+}
+
+@media (max-width: 480px) {
+  .sobre-nosotros {
+    flex-direction: column;
+    padding: 50px;
+  }
+}
+@media (min-width: 481px) {
+  .navbar-toggler {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  header ul {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  header .list-item {
+    color: white;
+    background-color: black;
+    padding: 7px;
+  }
+}
+@media (max-width: 480px) {
+  .conoce h1 {
+    font-size: medium;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
