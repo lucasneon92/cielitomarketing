@@ -8,9 +8,8 @@
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 33% 33% 33%;
-  background-color: #ffffff;
-  color: white;
   padding: 50px;
+  background-color: rgb(206, 206, 206);
   @include media-query-mobile() {
     display: flex;
     flex-direction: column;
@@ -27,7 +26,7 @@
       font-size: large;
       padding: 20px;
       background-color: rgb(36, 35, 35);
-      color: white;
+      color: $color-primario;
     }
     h2{
       font-size: medium;
@@ -35,7 +34,7 @@
     }
 
     &:hover {
-      border: 1px solid black;
+      color: $color-primario;
     }
 
     &.a {

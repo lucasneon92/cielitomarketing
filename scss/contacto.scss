@@ -8,8 +8,12 @@
     flex-direction: row;
     align-content: flex-start;
     justify-content: center;
-}
-  
+    background-color: rgb(199, 199, 199);
+
+    @include media-query-mobile() {
+      flex-direction: column;
+    }
+}  
     .horarios {
       padding: 50px;
     }
@@ -22,22 +26,18 @@
         padding: 0;
         display: flex;
         justify-content: center;
-  
         li {
           margin: 0 10px;
             img {
               width: 30px;
               height: 30px;
-            }
-          }
         }
       }
-    
-  
-
+    }
+  }
   .donde-estamos-a {
-    background-color: grey;
-    color: white;
+    background-color: rgb(199, 199, 199);
+    color: $color-secundario;
     font-size: large;
     text-align: center;
     padding: 30px;
@@ -49,11 +49,4 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px;
-}
-
-  @media (max-width: 480px) {
-    .contacto-b {
-        display: flex;
-        flex-direction: column;
-    }
 }
