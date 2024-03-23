@@ -1,3 +1,9 @@
+@mixin media-query-mobile {
+  @media (max-width: 480px) {
+      @content;
+  }
+}
+
 .contacto {
     text-align: center;
     padding: 50px;
@@ -13,34 +19,39 @@
     @include media-query-mobile() {
       flex-direction: column;
     }
-}  
-    .horarios {
-      padding: 50px;
-    }
+} 
+
+.horarios {
+    padding: 50px;
+}
   
-    .redes {
-      padding: 50px;
-      text-align: center;
-      .redes-sociales {
+.redes {
+    padding: 50px;
+    text-align: center;
+    
+    .redes-sociales {
         list-style: none;
         padding: 0;
         display: flex;
         justify-content: center;
-        li {
-          margin: 0 10px;
-            img {
-              width: 30px;
-              height: 30px;
-        }
+        
+    li {
+        margin: 0 10px;
+      
+    img {
+        width: 30px;
+        height: 30px;
       }
     }
   }
-  .donde-estamos-a {
-    background-color: rgb(199, 199, 199);
-    color: $color-secundario;
-    font-size: large;
-    text-align: center;
-    padding: 30px;
+}
+
+.donde-estamos-a {
+  background-color: rgb(199, 199, 199);
+  color: $color-secundario;
+  font-size: large;
+  text-align: center;
+  padding: 30px;
 }
 
 .donde-estamos-b {

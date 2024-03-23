@@ -10,6 +10,7 @@
   grid-template-columns: 33% 33% 33%;
   padding: 50px;
   background-color: rgb(206, 206, 206);
+
   @include media-query-mobile() {
     display: flex;
     flex-direction: column;
@@ -22,13 +23,15 @@
     color: $color-secundario;
     border-radius: 1px;
     padding: 30px;
-    h1{
-      font-size: large;
+
+    h2 {
+      font-size: medium;
       padding: 20px;
       background-color: rgb(36, 35, 35);
       color: $color-primario;
     }
-    h2{
+
+    h3 {
       font-size: medium;
       padding: 20px;
     }

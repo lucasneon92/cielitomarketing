@@ -1,0 +1,256 @@
+header {
+  @include flexbox(center, center);
+  display: flex;
+  height: 85px; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  font-family: Tahoma, sans-serif;
+
+  .ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+
+      @include media-query-mobile() {
+      flex-direction: column;
+      }
+  }
+
+  .list-item a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: $color-primario;
+      padding: 35px;
+
+      @include media-query-mobile() {
+          color: $color-primario;
+          background-color: $color-secundario;
+          padding: 7px;
+          }    
+      }
+
+      @include media-query-mobile() {
+          display: block
+      }
+}
+
+.list-item a:hover {
+  color: $color-secundario;
+}
+
+#banner_small {
+  display: flex;
+  flex-direction: row;
+  background-image: url(../images/mkt2.jpg);
+  height: 100px;
+  @include background (no-repeat, cover);
+}
+
+#banner_medium {
+  display: flex;
+  flex-direction: row;
+  background-image: url(../images/mkt2.jpg);
+  height: 200px;
+  @include background (no-repeat, cover);
+}
+
+#banner3 {
+  display: flex;
+  flex-direction: row;
+  background-image: url(../images/banner-miembros.jpeg);
+  height: 200px;
+  @include background (no-repeat, cover);
+}
+
+#hero {
+  width: 100%;
+  height: 50vh;
+  background-image: url('../images/fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .h1-container {
+    padding: 50px;
+    }
+
+  .h1 {
+    font-size: 40px;
+    font-weight: 300;
+    color: $color-primario;
+    padding: 10PX;
+  }
+
+  @include media-query-mobile() {
+      font-size: 30px;
+      padding: 35px;
+  }
+  
+  .p-container {
+    padding: 35px;
+  }
+  
+  .p {
+    color: $color-primario;
+    font-size: 20px;      
+
+  @include media-query-mobile() {
+  align-items: center;
+  padding: 0px;
+  font-size: 25px;
+  justify-content: center;
+      }   
+  } 
+}
+
+#agendar h2 {
+padding: 35px;
+align-items: center;
+text-align: center;
+}
+
+.cta-button {
+  background-color: rgb(218, 218, 218);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+
+  @include media-query-mobile() {
+     width: 85%; 
+  }
+
+
+  &:focus {
+    outline: none;
+  }
+
+  .cta-link {
+    color: #333;
+    display: block;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.cta-button:hover {
+  .cta-link {
+    background-color: $color-secundario;
+    color: $color-primario;
+    transform: scale(1.05);
+  }
+}
+
+.sobre-nosotros {
+  @include flexbox(center, center);
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20px;
+  gap: 20px;
+  padding: 100px;
+  background-image: url(../images/mkt2.jpg);
+
+  @include media-query-mobile(){
+      flex-direction: column;
+      padding: 50px;
+  }
+
+  & h2 {
+    background-color: $color-primario;
+    color: $color-secundario;
+    padding: 20px;
+  }
+
+  & h3 {
+    font-size: medium;
+    background-color: rgb(228, 228, 228)
+  }
+
+  & h2:hover {
+      transform: rotateZ(90deg);
+      transition: all 1s ease;
+  }
+}
+
+.nos-eligen {
+  @include flexbox(center, center);
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20px;
+  gap: 20px;
+  padding: 100px;
+
+  @include media-query-mobile(){
+  flex-direction: column;
+  padding: 50px;
+  }
+
+  & h2 {
+    background-color: $color-terciario;
+    color: $color-secundario;
+    padding: 10px;
+  }
+
+  & h3 {
+    font-size: medium;
+  }
+
+  & h2:hover {
+      transform: rotateZ(90deg);
+      transition: all 1s ease;
+  }
+}
+
+.navbar-nav .nav-item {
+  margin-right: 100px;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr); // 3 columnas con igual ancho
+grid-template-rows: repeat(2, 1fr);     // 2 filas con igual altura
+padding: 20px;
+grid-template-areas:
+  "grid-item-1 grid-item-2 grid-item-3"
+  "grid-item-1 grid-item-2 grid-item-3";
+
+  @include media-query-mobile() {
+      display: flex;
+      flex-direction: column
+  }
+
+.grid-item {
+  &-1 {
+    grid-area: grid-item-1;
+  }
+
+  &-2 {
+    grid-area: grid-item-2;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-3 {
+    grid-area: grid-item-3;
+  }
+
+  & h2 {
+      color: $color-terciario;
+  }
+
+  & h2:hover {
+      color: $color-secundario;
+  }
+
+  & h3 {
+      font-size: medium;
+  }
+}
+}

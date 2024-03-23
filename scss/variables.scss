@@ -1,3 +1,26 @@
 $color-primario: white;
 $color-secundario: black;
 $color-terciario: grey;
+
+@mixin flexbox($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+  }
+  
+@mixin background ($repeat, $size) {
+    background-repeat: $repeat;
+    background-size: $size;
+  }
+  
+@mixin media-query-mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+  }
+
+@media (max-width: 480px) {
+    .navbar-toggler {
+      display:block;
+    }
+  }

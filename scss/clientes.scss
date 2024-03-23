@@ -1,3 +1,9 @@
+@mixin media-query-mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+  }
+
 @mixin flexbox ($fd, $jc, $mb) {
     flex-direction: row;
     justify-content: center;
@@ -61,7 +67,7 @@
     text-align: center;
     padding: 30px;
 
-    h1 {
+    h2 {
     @media (max-width: 480px) {
             font-size: medium;
         }
