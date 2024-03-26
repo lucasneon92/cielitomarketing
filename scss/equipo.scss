@@ -1,65 +1,67 @@
-.miembro {
+.miembros {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
 
-    @include media-query-mobile() {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.miembro-texto {
-    width: 50%;
-    padding: 20px;
-    background-color: rgb(211, 211, 211);
-    color: $color-secundario;
-    padding: 50PX;
-
-    @include media-query-mobile() {
-        width: 85%;
-        padding: 50px;
+    img {
+        width: 300px;
+        height: 300px;
+        padding: 25px;
     }
 
     h2 {
-        font-size: medium;
-    }
-}
-
-.miembro-imagen {
-    width: 20%;
-    height: auto;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    &:hover {
-        transform: scale(1.1);
-        transition: all 1s ease;
-    }
-
-    @include media-query-mobile() {
-        width: 85%; 
-        max-width: 200px; 
-        height: auto;
+        display: flex;
+        flex-direction: column;
         padding: 20px;
     }
+
+    p {
+        padding: 35px;
+    }
 }
 
+.miembro1 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(83, 83, 83);
+    color: white;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+
+    @include media-query-mobile() {
+        flex-direction: column;
+        margin: auto;
+        padding: 0px;
+        margin-top: 20px;
+      }
+}
 
 .miembro2 {
     display: flex;
     flex-direction: row;
+    background-color: rgb(189, 189, 189);
+    color: black;
+    padding: 50px;
     justify-content: center;
-    background-image: url(../images/banner-miembros.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    align-items: center;
+
 
     @include media-query-mobile() {
-        flex-direction: column-reverse;
-        align-items: center;
+        flex-direction: column;
+        margin: auto;
+        padding: 0px;
+        margin-top: 20px;
+      }
     }
+
+.miembro-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }

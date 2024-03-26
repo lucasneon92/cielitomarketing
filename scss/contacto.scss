@@ -5,8 +5,16 @@
 }
 
 .contacto {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 50px;
+
+
+    @include media-query-mobile() {
+    display: flex;
+    flex-direction: column;
+    }
 }
 
 .contacto-b {
@@ -14,6 +22,7 @@
     flex-direction: row;
     align-content: flex-start;
     justify-content: center;
+    align-items: center;
     background-color: rgb(199, 199, 199);
 
     @include media-query-mobile() {
@@ -23,6 +32,8 @@
 
 .horarios {
     padding: 50px;
+    text-align: center;
+
 }
   
 .redes {
